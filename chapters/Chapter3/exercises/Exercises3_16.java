@@ -8,7 +8,8 @@ public class Exercises3_16 {
 		int a = (int) (Math.random() * 101);
 		int b = (int) (Math.random() * 201);
 
-		System.out.println("Random coordinate is : " + a + "   " + b);
+		System.out.println("Random coordinate is : (0," +a+")" + "(0," +b+")");
+
 
 	}
 
