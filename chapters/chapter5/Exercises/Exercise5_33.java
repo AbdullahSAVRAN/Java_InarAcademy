@@ -1,27 +1,27 @@
-package chapter5.Exercises;
+package chapters.chapter5.Exercises;
 
 public class Exercise5_33 {
-
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         //Perfect number
-		
-		for (int number = 6; number < 10001; number++) {
+        for (int number = 6; number < 10001; number++) {
 
-			int total = 0;
-			int divisor = number - 1;
+            int total = 0;
+            int divisor = number - 1;
 
-			while (divisor > 0) {
+            while (divisor > 0) {
 
-				if (number % divisor == 0) {
-					total += divisor;
-				}
-				divisor--;
-			}
-			if (number == total) {
+                if (number % divisor == 0) {
+                    total += divisor;
+                }
+                divisor--;
+            }
+            if (number == total) {
 
-				System.out.println("Positive number : " + number);
-			}
-		}
+                System.out.println("Positive number : " + number);
+            }
+        }
 
-	}
-}
+    }
+        }
+
+

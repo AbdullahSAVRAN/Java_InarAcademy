@@ -1,34 +1,29 @@
-package chapter5.Exercises;
+package chapters.chapter5.Exercises;
 
 public class Exercise5_20 {
+    public static void main(String[] args) {
+        //Display prime numbers between 2 and 1,000
+        int count = 0;
 
-	public static void main(String[] args) {
-		// Display prime numbers between 2 and 1,000
+        for (int i = 2; i < 1001; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j <= i / 2; j++) {
 
-		int nextLineCount = 8;
-		for (int i = 2; i <= 1000; i++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
 
-			if (isPrime(i)) {
-				System.out.print(i + " ");
-				nextLineCount--;
-				if (nextLineCount == 0) {
-					System.out.println();
-					nextLineCount = 8;
-				}
-			}
-		}
-	}
+            }
+            if (isPrime) {
+                count++;
 
-	public static boolean isPrime(int n) {
-		boolean notPrime = false;
-		int d = 2;
-		while (d <= n / 2) {
-			if (n % d == 0) {
-				notPrime = true;
-				break;
-			}
-			d++;
-		}
-		return !notPrime;
-	}
+                if (count % 8 == 0){
+                    System.out.println(i);
+                }else {
+                    System.out.print(i + " ");
+                }   }
+        }
+    }
 }
+

@@ -1,20 +1,20 @@
-package chapter5.Exercises;
+package chapters.chapter5.Exercises;
 
 public class Exercise5_26 {
+    public static void main(String[] args) {
+       //Compute e
 
-	public static void main(String[] args) {
-		// Compute e
+        double e = 0.0,
+                value = 10000.0;
+        for (double i = 1; i <= value; i++) {
+            double denominator = i;
+            for (double k = i - 1; k >= 1; k--) {
+                denominator *= k;
+            }
+            e += 1 / denominator;
 
-		double q = 1;
-		double e = 1;
+        }
+        System.out.println("The e value for i = 10000: " + e);
+    }
+    }
 
-		for (int i = 1; i < 10001; i++) {
-
-			q *= i;
-
-			e += (1 / q);
-		}
-		System.out.println(q);
-
-	}
-}

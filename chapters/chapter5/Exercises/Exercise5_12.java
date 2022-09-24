@@ -1,21 +1,20 @@
-package chapter5.Exercises;
+package chapters.chapter5.Exercises;
 
 public class Exercise5_12 {
+    public static void main(String[] args) {
+        //Find the smallest n such that n^2 > 12,000
 
-	public static void main(String[] args) {
-        //Find the smallest n such that n2 7 12,000
-		
-		int i = 1;
-		int n = 0;
-		double n2 = 0;
-		while ((n2 = Math.pow(i, 2)) < 12300) {
-			n = i;
-			i++;
+        int n = 1;
+        int n2 = 1;
+        while (n2 < 12000) {
+            n++;
+            n2 = n * n;
+        }
+            if (n2 > 12000) {
 
-		}
-		if (n2 > 12000) {
-			System.out.println("The smallest integer : " + n);
-		}
+                System.out.println("The smallest integer n : " + n);
+            }
+        }
 
-	}
-}
+    }
+

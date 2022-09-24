@@ -1,31 +1,24 @@
-package chapter5.Exercises;
+package chapters.chapter5.Exercises;
 
 import java.util.Scanner;
 
 public class Exercise5_31 {
+    public static void main(String[] args) {
+       //Financial application: compute CD value
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your amount : ");
+        double amount = input.nextDouble();
+        System.out.println("Enter annual interest rate : ");
+        double rate = input.nextDouble();
 
-	public static void main(String[] args) {
-        //Financial application : compute CD value
-		
-		Scanner input = new Scanner(System.in);
+        System.out.println("Enter number of years : ");
+        double year = input.nextDouble();
 
-		System.out.print("Enter the initial amount: ");
-		double amount = input.nextDouble();
+        for ( int i =1; i <= year; i++ ){
+            amount = amount + amount * rate / 1200;
+            System.out.printf("After %d months,CD is worth %5.2f",i,amount);
+            System.out.println();
+        }
 
-		System.out.print("Enter annual percentage: ");
-		double annualInterestRate = input.nextDouble();
-		double monthlyInterestRate = annualInterestRate / 1200.0;
-
-		System.out.print("Enter months: ");
-		double numberOfMonths = input.nextInt();
-
-		System.out.print("Months\t\tCD Value\n");
-		double amountInAccount = amount;
-		for (int i = 1; i <= numberOfMonths; i++) {
-			amountInAccount *= (1 + monthlyInterestRate);
-			System.out.printf("%4d%20.2f\n", i, amountInAccount);
-
-		}
-
-	}
+    }
 }
